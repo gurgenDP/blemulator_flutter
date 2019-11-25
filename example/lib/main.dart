@@ -1,4 +1,3 @@
-import 'package:blemulator_example/adapter/ble_adapter.dart';
 import 'package:blemulator_example/di/ble_adapter_injector.dart';
 import 'package:blemulator_example/peripheral_details/bloc.dart';
 import 'package:blemulator_example/peripheral_details/peripheral_details_screen.dart';
@@ -22,8 +21,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FlutterBleLib example',
       theme: new ThemeData(
-        primaryColor: new Color(0xFF0A3D91),
-        accentColor: new Color(0xFFCC0000),
+        primaryColor: Color(0xFF0A3D91),
+        accentColor: Color(0xFFCC0000),
+        scaffoldBackgroundColor: Color.fromRGBO(242, 242, 247, 1.0),
+        cardTheme: CardTheme(
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(8.0),
+            ),
+          ),
+        ),
       ),
       initialRoute: "/",
       routes: <String, WidgetBuilder>{
